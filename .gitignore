@@ -1,0 +1,23 @@
+# ── 私密配置：绝不入库 ──
+config.json
+config.local.json
+.env
+scripts/.tikhub_api_key
+tikhub_api_key
+
+# ── 采集产物：属于使用者本地数据 ──
+raw/
+normalized/
+reports/
+ledger.json
+.local/
+
+# ── Python ──
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ── 系统与打包 ──
+.DS_Store
+dist/
+*.log

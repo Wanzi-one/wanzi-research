@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{平台}} · {{账号名}} 四维拆解</title>
+<style>
+  :root{
+    --bg:#FFF8E7;          /* 奶油底 */
+    --card:#FFFFFF;
+    --main:#E8B547;        /* 暖黄主色 */
+    --main-soft:#FDF3DC;
+    --text:#5A4A1F;        /* 深棕文字 */
+    --text-soft:#8A7752;
+    --line:#EFE3C8;
+    --warn:#C4643C;
+    --ok:#5C8A4A;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;padding:32px 20px 64px;
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75;font-size:15px;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+  header{border-bottom:3px solid var(--main);padding-bottom:18px;margin-bottom:28px;}
+  .kicker{display:inline-block;background:var(--main);color:#fff;font-size:12px;
+    letter-spacing:.08em;padding:3px 12px;border-radius:999px;margin-bottom:12px;}
+  h1{font-size:26px;margin:0 0 10px;letter-spacing:-.01em;}
+  .sub{color:var(--text-soft);font-size:13px;}
+  h2{font-size:19px;margin:36px 0 14px;padding-left:12px;border-left:5px solid var(--main);}
+  h3{font-size:16px;margin:22px 0 8px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;margin:14px 0;}
+  .lead{background:var(--main-soft);border:1px solid var(--main);border-radius:var(--radius);
+    padding:16px 20px;font-size:16px;font-weight:600;margin:0 0 24px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0;}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 16px;text-align:center;}
+  .metric .n{font-size:22px;font-weight:700;color:var(--main);display:block;line-height:1.3;}
+  .metric .l{font-size:12px;color:var(--text-soft);}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;
+    background:var(--card);border-radius:var(--radius);overflow:hidden;}
+  th{background:var(--main-soft);text-align:left;padding:10px 12px;font-weight:600;
+    border-bottom:1px solid var(--line);}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;
+    background:var(--main-soft);color:var(--text-soft);margin-right:6px;}
+  .unverified{color:var(--warn);font-weight:600;}
+  .quote{border-left:3px solid var(--main);padding:6px 0 6px 14px;color:var(--text-soft);
+    font-style:italic;margin:10px 0;}
+  ul{padding-left:20px;}
+  li{margin:6px 0;}
+  footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);
+    color:var(--text-soft);font-size:12px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="kicker">{{平台}} · 对标拆解</span>
+  <h1>{{账号名}}</h1>
+  <div class="sub">
+    采集时间：{{采集时间}}　·　数据范围：{{数据范围}}　·　请求数：{{请求数}} 次　·　数据来源：{{数据来源文件}}
+  </div>
+</header>
+
+<p class="lead">{{一句话结论：这个账号是什么、靠什么赚钱}}</p>
+
+<!-- 1. 基础数据卡 -->
+<h2>基础数据</h2>
+<div class="grid">
+  <div class="metric"><span class="n">{{粉丝数}}</span><span class="l">粉丝</span></div>
+  <div class="metric"><span class="n">{{内容总数}}</span><span class="l">采集内容数</span></div>
+  <div class="metric"><span class="n">{{赞中位}}</span><span class="l">点赞中位</span></div>
+  <div class="metric"><span class="n">{{收藏赞比}}</span><span class="l">收藏/赞 比</span></div>
+  <div class="metric"><span class="n">{{商品位比例}}</span><span class="l">商品/转化位占比</span></div>
+  <div class="metric"><span class="n">{{活跃度}}</span><span class="l">最近更新</span></div>
+</div>
+<p class="sub">{{数据口径说明：哪些字段不可用、哪些日期置信度不足}}</p>
+
+<!-- 2. 四维拆解 -->
+<h2>四维拆解</h2>
+
+<h3>① 人设定位</h3>
+<div class="card">
+  <p><strong>三层结构</strong></p>
+  <ul>
+    <li>专业层：{{身份与资历，附来源}}</li>
+    <li>同路层：{{与用户共享的处境}}</li>
+    <li>使命层：{{如何消解卖货感}}</li>
+  </ul>
+  <p><strong>反差点</strong>：{{人设中形成的张力}}</p>
+  <p class="sub">证据：{{简介原文 / 认证 / 置顶内容，用引号引用}}</p>
+</div>
+
+<h3>② 人群定位</h3>
+<div class="card">
+  <p><strong>核心人群</strong>：{{处境 + 触发场景 + 当下目标}}</p>
+  <p><strong>生命周期延展</strong>：{{这批人之后会走到哪，账号有没有跟着走}}</p>
+  <p><strong>评论区验证</strong>：</p>
+  <div class="quote">{{用户自述处境的原话，1–2 条}}</div>
+</div>
+
+<h3>③ 内容定位</h3>
+<div class="card">
+  <p><strong>主线</strong>：{{反复回到的母题}}</p>
+  <p><strong>支线</strong>：{{为获取流量接入的话题}}</p>
+  <p><strong>形态分布</strong>：{{视频/图文比例、时长偏好}}</p>
+  <p><strong>爆款结构提取</strong>（挑 3–5 条高互动内容）：</p>
+  <table>
+    <tr><th>内容</th><th>钩子</th><th>结构</th><th>落点</th></tr>
+    <tr><td>{{标题}}</td><td>{{开头切入}}</td><td>{{主体安排}}</td><td>{{情绪/行动}}</td></tr>
+  </table>
+  <p><strong>标题公式</strong>：{{高频句式归类}}</p>
+</div>
+
+<h3>④ 商业定位</h3>
+<div class="card">
+  <p><strong>变现路径</strong>：{{六种路径中的哪几种}}</p>
+  <p><strong>产品清单</strong>：</p>
+  <table>
+    <tr><th>产品/服务</th><th>价格</th><th>证据可靠度</th></tr>
+    <tr><td>{{名称}}</td><td>{{价格}}</td><td>{{平台事实 / 评论线索 / 推断待验证}}</td></tr>
+  </table>
+  <p><strong>转化入口</strong>：{{简介 → 店铺 → 商品笔记 → 评论区 → 私信的哪一环}}</p>
+</div>
+
+<!-- 3. 直答四问 -->
+<h2>直答四问</h2>
+<table>
+  <tr><th>问题</th><th>结论</th></tr>
+  <tr><td>帮哪类人</td><td>{{}}</td></tr>
+  <tr><td>解决什么具体问题</td><td>{{}}</td></tr>
+  <tr><td>提供什么产品或服务</td><td>{{}}</td></tr>
+  <tr><td>内容围绕什么</td><td>{{}}</td></tr>
+</table>
+
+<!-- 4. 评论区信号 -->
+<h2>评论区三类信号</h2>
+<table>
+  <tr><th>类型</th><th>采样实例</th><th>解读</th></tr>
+  <tr><td>需求信号</td><td class="quote">{{原话}}</td><td>{{}}</td></tr>
+  <tr><td>异议信号</td><td class="quote">{{原话}}</td><td>{{}}</td></tr>
+  <tr><td>转化信号</td><td class="quote">{{原话}}</td><td>{{}}</td></tr>
+</table>
+
+<!-- 5. 可借鉴 -->
+<h2>可借鉴清单</h2>
+<table>
+  <tr><th>动作</th><th>迁移度</th><th>说明</th></tr>
+  <tr><td>{{}}</td><td><span class="tag">可直接用</span></td><td>{{}}</td></tr>
+  <tr><td>{{}}</td><td><span class="tag">需改造</span></td><td>{{}}</td></tr>
+  <tr><td>{{}}</td><td><span class="tag">不建议</span></td><td>{{}}</td></tr>
+</table>
+
+<!-- 6. 风险 -->
+<h2>风险与不确定性</h2>
+<ul>
+  <li>流量变化：{{互动趋势是否衰减、是否停更}}</li>
+  <li>信任风险：{{是否存在高赞质疑}}</li>
+  <li><span class="unverified">待验证</span>：{{无法确证的项与推断路径}}</li>
+  <li>字段不可用：{{平台未返回的字段}}</li>
+</ul>
+
+<footer>
+  本报告事实部分来自平台公开数据与原文引用；分析判断已标注，无法确证处标注「待验证」。<br>
+  一次性采集为快照，账号数据会随时间变化。数据文件：{{附录文件列表}}
+</footer>
+
+</div>
+</body>
+</html>

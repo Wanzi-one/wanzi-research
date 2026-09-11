@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 自由碗子
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+补充说明：
+
+1. 本软件不包含任何 API Key、Cookie 或平台登录态，使用者需自行申请并支付第三方数据
+   网关的服务费用。
+2. 本软件与任何数据网关服务商之间不存在隶属、代理、转售或背书关系。
+3. 使用者应确保其采集行为符合目标平台的服务条款与所在地法律法规，仅采集公开数据，
+   不得用于绕过访问控制或侵犯他人隐私。
+4. 本软件输出的分析结论由使用者自行判断其适用性，作者不对使用结果承担责任。
