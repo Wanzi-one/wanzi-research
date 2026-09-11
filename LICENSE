@@ -1,32 +1,53 @@
-MIT License
+碗子调研 · 使用许可 v1.0
+wanzi-research · Usage License v1.0
 
-Copyright (c) 2026 自由碗子
+Copyright (c) 2026 自由碗子（Wanzi-one）
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+────────────────────────────────────────────────────────
+一句话概括：免费用、随便改、保留署名，但不得转卖。
+Summary: free to use and modify with attribution; reselling is not permitted.
+────────────────────────────────────────────────────────
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+一、你可以自由地
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. 免费使用本软件，包括个人用途与商业机构内部用途；
+2. 修改本软件，并在其基础上创作衍生作品；
+3. 复制、分发本软件或你的衍生作品。
 
----
+二、你必须
 
-补充说明：
+1. 完整保留本许可文件与上述版权署名，不得删除、修改或替换；
+2. 在你分发本软件或其衍生作品时，一并附上本许可的完整文本；
+3. 若你公开分享基于本软件的衍生作品，建议（非强制）注明来源。
 
-1. 本软件不包含任何 API Key、Cookie 或平台登录态，使用者需自行申请并支付第三方数据
-   网关的服务费用。
+三、你不可以
+
+1. 将本软件或其衍生作品作为商品出售、出租、按订阅收费，或整体打包进任何
+   需要付费才能获得的产品或服务中（例如付费课程、付费社群、付费工具包）；
+2. 声称本软件由你原创，或使用作者名称、品牌进行宣传、背书、导流；
+3. 通过对本软件做轻微修改、改名、拆分重组等方式规避上述限制。
+
+四、需要商业授权的情形
+
+若你是商业机构，希望将本软件用于对外提供的付费服务，或需要转售、嵌入商业
+产品，请联系作者取得单独的商业授权。
+
+五、免责声明
+
+本软件按「现状」提供，不附带任何明示或暗示的担保，包括但不限于对适销性、
+特定用途适用性及不侵权的担保。在任何情况下，作者均不对因使用或无法使用本
+软件而产生的任何索赔、损害或其他责任负责。
+
+六、其他约定
+
+1. 本软件不包含任何 API Key、Cookie 或平台登录态。使用者需自行申请并支付
+   第三方数据网关的服务费用。
 2. 本软件与任何数据网关服务商之间不存在隶属、代理、转售或背书关系。
-3. 使用者应确保其采集行为符合目标平台的服务条款与所在地法律法规，仅采集公开数据，
-   不得用于绕过访问控制或侵犯他人隐私。
+3. 使用者应确保其采集行为符合目标平台的服务条款与所在地法律法规，仅采集
+   公开数据，不得用于绕过访问控制或侵犯他人隐私。
 4. 本软件输出的分析结论由使用者自行判断其适用性，作者不对使用结果承担责任。
+
+────────────────────────────────────────────────────────
+
+This is a custom source-available license, not an OSI-approved license.
+For commercial licensing inquiries, contact the author.

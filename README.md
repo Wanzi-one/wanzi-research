@@ -62,7 +62,7 @@ cp -r ~/.agents/skills/wanzi-research ~/.workbuddy/skills/wanzi-research
 wanzi-research/
 ├── SKILL.md                      # 触发条件与执行纪律
 ├── README.md                     # 你正在读的这份
-├── LICENSE                       # MIT
+├── LICENSE                       # 自定义许可：免费使用·保留署名·禁止转卖
 ├── CHANGELOG.md                  # 更新记录
 ├── VERSION                       # 当前版本
 ├── config.example.json           # 非敏感配置模板
@@ -134,7 +134,7 @@ python3 scripts/api_request.py \
 
 ## 成本
 
-技能代码免费（MIT）。数据采集费用由你直接付给数据网关，与作者无关。
+技能代码免费使用（保留署名·禁止转卖，详见 `LICENSE`）。数据采集费用由你直接付给数据网关，与作者无关。
 
 粗略量级：多数端点约 `0.001–0.01 USD / 次`。一次账号拆解通常 10–30 次请求；关键词选题约 10–15 次。**精确价格以网关官方价格页与价格计算接口为准**，脚本支持 `--official-price` 实时核准。
 
@@ -147,4 +147,11 @@ python3 scripts/api_request.py \
 
 ## 许可
 
-MIT License。见 `LICENSE`。
+自定义许可（`LICENSE`）：**免费使用 · 保留署名 · 禁止转卖**。
+
+- ✅ 可以：免费用（含商业机构内部使用）、修改、创作衍生作品、分发
+- ⚠️ 必须：保留 `LICENSE` 与版权署名
+- ❌ 不可：出售、出租、按订阅收费，或整体打包进付费课程／付费社群／付费工具包
+- 📩 需要对外提供付费服务或商业嵌入，请联系作者取得单独授权
+
+> 这不是 OSI 认可的标准协议，而是「源码可见」的自定义许可。若你的组织只接受标准开源协议，请先与作者确认。
