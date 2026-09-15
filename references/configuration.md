@@ -34,6 +34,12 @@ echo 'export TIKHUB_API_KEY="你的Key"' >> ~/.zshenv
 chmod 600 ~/.zshenv
 ```
 
+**WorkBuddy 沙箱实测（2026-09-14）**：即使在 `~/.zshenv` 里配好了，沙箱化执行环境也可能不加载任何 zsh 启动文件（`--check-config` 返回 `configured: false`）。此时不必重配，每条命令前显式 `source` 即可：
+
+```bash
+source ~/.zshenv && python3 scripts/api_request.py --check-config
+```
+
 bash 用户可写 `~/.bash_profile`，但同样注意非交互 shell 的行为差异。另一条更稳的路是方式二。
 
 ### 方式二：macOS 钥匙串

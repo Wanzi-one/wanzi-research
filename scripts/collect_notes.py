@@ -38,12 +38,13 @@ PLATFORMS: dict[str, dict[str, Any]] = {
         "productish_field": "is_goods_note",
     },
     "douyin": {
-        "endpoint": "/api/v1/douyin/web/fetch_user_post_videos",
+        # 2026-09-13 实测：web 端点翻 2-3 页后返回空列表（status_code=0 但 aweme_list 空），改用 app_v3 翻页正常
+        "endpoint": "/api/v1/douyin/app/v3/fetch_user_post_videos",
         "id_param": "sec_user_id",
-        "list_path": ["data", "data", "aweme_list"],
-        "has_more_path": ["data", "data", "has_more"],
+        "list_path": ["data", "aweme_list"],   # 2026-09 实测：网关只包一层 data；旧结构 data.data 已由 fallback 兜底
+        "has_more_path": ["data", "has_more"],
         "cursor_mode": "response",      # 游标来自响应体
-        "cursor_path": ["data", "data", "max_cursor"],
+        "cursor_path": ["data", "max_cursor"],
         "page_param": "max_cursor",
         "page_size_param": "count",
         "page_size": 20,

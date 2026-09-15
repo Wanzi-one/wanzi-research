@@ -30,9 +30,12 @@
 | 用途 | 路径 | 关键参数 | 备注 |
 | --- | --- | --- | --- |
 | 单条详情 | `/douyin/web/fetch_one_video` | `aweme_id` | 可取作者真实粉丝数 |
-| 账号作品 | `/douyin/web/fetch_user_post_videos` | `sec_user_id`, `max_cursor`, `count` | 游标是数字，来自响应体 |
-| 综合搜索 | `/douyin/search/fetch_general_search_v3` | `keyword`, `cursor`, `count` | 条目外层是 `{type, aweme_info:{...}}` |
-| 视频评论 | `/douyin/web/fetch_video_comments` | `aweme_id`, `cursor`, `count` | 每页约 50 条 |
+| 找账号 | `/douyin/creator/fetch_user_search` | `user_name` | 2026-09 实测可用；`fetch_general_search_v3` 持续 400 |
+| 换 sec_uid | `/douyin/web/fetch_user_profile_by_short_id` | `short_id`（即抖音号） | 返回字段较少但含 `sec_uid`；要全字段用 `/douyin/app/v3/handler_user_profile` |
+| 账号作品 | `/douyin/web/fetch_user_post_videos` | `sec_user_id`, `max_cursor`, `count` | 游标是数字，来自响应体。**2026-09 实测第 2 页起返回空列表**（status_code=0 但 aweme_list 空），改用 `/douyin/app/v3/fetch_user_post_videos` 翻页正常；响应只有一层 `data`（`data.aweme_list`）。**collect_notes.py 的抖音适配器已于 2026-09-13 改为 app_v3**。另：app_v3 深翻页时网关约每 10 页出现 1 次瞬时 400（不扣费），用 `--resume` 续跑即可补齐缺口页；最尾部 2-3 页可能持续 400 拉不到（最早期作品），占比较小可放弃并写明 |
+| 综合搜索 | `/douyin/search/fetch_general_search_v3` | `keyword`, `page` | 条目外层是 `{type, aweme_info:{...}}`；2026-09 实测持续 400（含官方默认参数），先换 creator 搜索 |
+| 视频评论 | `/douyin/web/fetch_video_comments` | `aweme_id`, `cursor`, `count` | 每页约 50 条；2026-09-13 实测部分 aweme_id 持续 400（非瞬时），换 `/douyin/app/v3/fetch_video_comments` 可用，但每页只返回 20 条 |
+| 视频详情 | `/douyin/web/fetch_one_video`、`/douyin/app/v3/fetch_one_video` | `aweme_id` | 两个版本都**不返回商品卡**（无商品名/价格），只有 `status.with_goods` 布尔标记；带货分析从文案 hashtag + 评论区构建，价格一律标待验证 |
 
 **内容条目关键字段**：`aweme_id`、`desc`、`create_time`（unix 时间戳）、`statistics.{digg_count, comment_count, collect_count, share_count, play_count}`、`is_top`、`author.follower_count`。
 

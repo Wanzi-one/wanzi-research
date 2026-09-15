@@ -235,7 +235,13 @@ social-research/
 
 ### 第七步：分析与交付
 
-按四维框架（人设 / 人群 / 内容 / 商业）拆解，方法论与报告结构见 `references/analysis-framework.md`，报告模板见 `assets/report-template.html`。
+按四维框架（人设 / 人群 / 内容 / 商业）拆解，方法论与报告结构见 `references/analysis-framework.md`。
+
+**最终报告必须输出为 HTML 文件**，不允许用 Markdown 充当最终报告：
+
+- 以 `assets/report-template.html` 为骨架（奶油黄配色、四维结构），把本次数据与结论填入对应区块后，写到输出目录的 `reports/` 下；
+- Markdown 只能作为附加摘要，不能替代 HTML；
+- 仅当用户明确说「只要 Markdown / 不要 HTML」时才降级为 md。
 
 交付清单：
 
@@ -275,6 +281,7 @@ social-research/
 
 ## 交付验收清单
 
+- [ ] 交付了 HTML 报告文件（基于 `assets/report-template.html` 骨架），md 只作附加摘要
 - [ ] 平台、对象、范围、采集时间、数据来源写清楚
 - [ ] 样本通过后才批量
 - [ ] 请求数与费用有记录（ledger 可查）
